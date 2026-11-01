@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Babyccino Coffee &amp; Kitchen | Independent coffee shop in Paddock Wood</title>
+  <meta name="description" content="Babyccino is a small, local, independent coffee shop on Commercial Road, Paddock Wood. Speciality coffee, brunch and lunch with an Asian twist. Dine in, takeaway or order on Deliveroo and Just Eat." />
+  <meta property="og:title" content="Babyccino Coffee &amp; Kitchen" />
+  <meta property="og:description" content="Small, local, independent coffee shop in Paddock Wood." />
+  <meta property="og:image" content="img/hero.webp" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FAF7EF',
+            creamdeep: '#F3EEE1',
+            olive: '#393D24',
+            olivedeep: '#2E311C',
+            green: '#27633F',
+            greendeep: '#1E4D31',
+            ink: '#1F2316',
+            muted: '#5C6150',
+            line: '#E6DFCF',
+          },
+          fontFamily: {
+            serif: ['"Instrument Serif"', 'Georgia', 'serif'],
+            sans: ['Figtree', 'system-ui', 'sans-serif'],
+          },
+          maxWidth: { site: '1200px' },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { -webkit-font-smoothing: antialiased; }
+    .eyebrow { font-family: Figtree, system-ui, sans-serif; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+    input, select, textarea { font-family: Figtree, system-ui, sans-serif; }
+    select { -webkit-appearance: none; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%235C6150' stroke-width='1.5'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; }
+  </style>
+</head>
+
+<body class="bg-cream text-ink font-sans antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur border-b border-line">
+    <div class="max-w-site mx-auto px-5 sm:px-8 h-[76px] flex items-center justify-between">
+      <a href="#top" class="flex items-center" aria-label="Babyccino Coffee & Kitchen home">
+        <img src="img/logo.webp" alt="Babyccino Coffee & Kitchen" class="h-[58px] w-auto" />
+      </a>
+
+      <nav class="hidden md:flex items-center gap-9 text-[15px] font-medium text-ink">
+        <a href="#menu" class="hover:text-green transition-colors">Menu</a>
+        <a href="#story" class="hover:text-green transition-colors">Our Story</a>
+        <a href="#visit" class="hover:text-green transition-colors">Find Us</a>
+        <a href="#contact" class="hover:text-green transition-colors">Contact</a>
+        <a href="#contact" class="inline-flex items-center h-10 px-5 rounded-full bg-green text-cream text-[14px] font-semibold tracking-wide hover:bg-greendeep transition-colors">Book a table</a>
+      </nav>
+
+      <button id="menuBtn" class="md:hidden inline-flex items-center justify-center w-11 h-11 -mr-2 rounded-full hover:bg-creamdeep" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+      </button>
+    </div>
+
+    <div id="mobileNav" class="md:hidden hidden border-t border-line bg-cream">
+      <nav class="max-w-site mx-auto px-5 py-3 flex flex-col text-[17px]">
+        <a href="#menu" class="py-3 border-b border-line">Menu</a>
+        <a href="#story" class="py-3 border-b border-line">Our Story</a>
+        <a href="#visit" class="py-3 border-b border-line">Find Us</a>
+        <a href="#contact" class="py-3 border-b border-line">Contact</a>
+        <a href="#contact" class="mt-3 mb-2 inline-flex items-center justify-center h-12 rounded-full bg-green text-cream font-semibold">Book a table</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative min-h-[600px] lg:min-h-[680px] flex items-end overflow-hidden">
+      <img src="img/hero.webp" alt="Coffee beans spilling from a brass scoop on linen" class="absolute inset-0 w-full h-full object-cover object-[65%_center]" />
+      <div class="absolute inset-0 bg-gradient-to-r from-olive/85 via-olive/50 to-olive/10"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-olive/70 via-transparent to-transparent"></div>
+
+      <div class="relative max-w-site mx-auto w-full px-5 sm:px-8 pt-28 pb-16 lg:pb-24">
+        <p class="eyebrow text-cream/80 mb-5">Paddock Wood · Est. 2024</p>
+        <h1 class="font-serif text-cream text-[52px] leading-[1.02] sm:text-[72px] lg:text-[92px] max-w-[11ch]">
+          Small, local, <em class="italic">independent</em> coffee shop.
+        </h1>
+        <p class="mt-6 max-w-[46ch] text-cream/85 text-[17px] sm:text-[18px] leading-relaxed">
+          Speciality coffee, hearty breakfasts and brunch with an Asian twist, served with a warm welcome on Commercial Road.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#menu" class="inline-flex items-center h-12 px-7 rounded-full bg-cream text-olive text-[15px] font-semibold hover:bg-white transition-colors">See the menu</a>
+          <a href="#contact" class="inline-flex items-center h-12 px-7 rounded-full border border-cream/60 text-cream text-[15px] font-semibold hover:bg-cream/10 transition-colors">Book a table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info strip -->
+    <div class="bg-olive text-cream">
+      <div class="max-w-site mx-auto px-5 sm:px-8 py-4 flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:justify-between gap-y-2 gap-x-8 text-[14px] sm:text-[15px]">
+        <div class="flex items-center gap-2.5">
+          <svg class="shrink-0 text-cream/70" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span>49 Commercial Road, Paddock Wood TN12 6EN</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="shrink-0 text-cream/70" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <span>Mon–Fri 7:30–4:30 · Sat 9–5 · Sun 9–4:30</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <svg class="shrink-0 text-cream/70" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          <a href="tel:01580854896" class="hover:underline">01580 854 896</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ INTRO QUOTE ============ -->
+    <section class="bg-cream">
+      <div class="max-w-site mx-auto px-5 sm:px-8 py-20 lg:py-28 text-center reveal">
+        <p class="eyebrow text-green mb-6">Carefully sourced</p>
+        <p class="font-serif text-[30px] sm:text-[38px] lg:text-[46px] leading-[1.18] text-ink max-w-[26ch] mx-auto">
+          We work with a small list of carefully chosen suppliers and source the freshest, highest quality ingredients, giving you the ultimate Babyccino experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ DINE IN / TAKEAWAY ============ -->
+    <section class="bg-white">
+      <div class="max-w-site mx-auto px-5 sm:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="reveal">
+          <img src="img/food-eggs.webp" alt="Fried eggs with pea shoots and tomatoes on toasted croissant" class="w-full aspect-[4/5] object-cover rounded-[4px]" />
+        </div>
+        <div class="reveal">
+          <p class="eyebrow text-green mb-4">How you like it</p>
+          <h2 class="font-serif text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.02] text-green">Dine in or takeaway</h2>
+          <p class="mt-6 text-[17px] leading-relaxed text-muted max-w-[52ch]">
+            Our delicious food can be enjoyed anywhere, with enough variety for relaxed dining in, grab-and-go, or delivered straight to your door.
+          </p>
+
+          <ul class="mt-10 grid sm:grid-cols-3 gap-6 sm:gap-4">
+            <li class="border-t border-line pt-5">
+              <p class="font-serif text-[24px] text-ink">Dine in</p>
+              <p class="mt-1 text-[15px] text-muted leading-relaxed">Settle in with a cup and a plate.</p>
+            </li>
+            <li class="border-t border-line pt-5">
+              <p class="font-serif text-[24px] text-ink">Grab &amp; go</p>
+              <p class="mt-1 text-[15px] text-muted leading-relaxed">Coffee and food ready in minutes.</p>
+            </li>
+            <li class="border-t border-line pt-5">
+              <p class="font-serif text-[24px] text-ink">Delivered</p>
+              <p class="mt-1 text-[15px] text-muted leading-relaxed">
+                <a href="https://deliveroo.co.uk/menu/royal-tunbridge-wells/tn1/babyccino-49-commercial-road" target="_blank" rel="noopener" class="text-green underline underline-offset-4 decoration-green/40 hover:decoration-green">Deliveroo</a>
+                or
+                <a href="https://www.just-eat.co.uk/restaurants-babyccino-tn12/menu" target="_blank" rel="noopener" class="text-green underline underline-offset-4 decoration-green/40 hover:decoration-green">Just Eat</a>.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUR FOCUS IS YOU ============ -->
+    <section class="bg-cream">
+      <div class="max-w-site mx-auto px-5 sm:px-8 pt-20 lg:pt-28 pb-16 lg:pb-20">
+        <div class="max-w-[64ch] mx-auto text-center reveal">
+          <p class="eyebrow text-green mb-4">Family friendly</p>
+          <h2 class="font-serif text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.02] text-green">Our focus is you</h2>
+          <p class="mt-6 text-[17px] leading-relaxed text-muted">
+            Whether you’re joining us for a quick cuppa and a catch up, or to fill up on a hearty breakfast, we’re here to make your time with us as enjoyable as possible.
+          </p>
+          <p class="mt-4 text-[17px] leading-relaxed text-muted">
+            Got little ones? We’ve got toys in the coffee table to keep them busy while you enjoy your drink still hot, and a <strong class="text-ink font-semibold">free Babyccino</strong> with every hot drink makes the deal just a little sweeter.
+          </p>
+        </div>
+
+        <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 reveal">
+          <img src="img/home-13.webp" alt="Iced drink topped with cream and petals on a marble table" class="w-full aspect-[4/5] object-cover rounded-[4px]" />
+          <img src="img/home-14.webp" alt="Stack of matcha pancakes beneath the Babyccino sign" class="w-full aspect-[4/5] object-cover rounded-[4px]" />
+          <img src="img/home-15.webp" alt="Brioche burger with fries and dipping sauce" class="w-full aspect-[4/5] object-cover rounded-[4px]" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MENU ============ -->
+    <section id="menu" class="bg-olive text-cream scroll-mt-20">
+      <div class="max-w-site mx-auto px-5 sm:px-8 py-20 lg:py-28">
+        <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div class="lg:col-span-5 reveal">
+            <p class="eyebrow text-cream/70 mb-4">Our menu</p>
+            <h2 class="font-serif text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.02]">Breakfast, brunch &amp; lunch with an Asian twist</h2>
+            <p class="mt-6 text-[17px] leading-relaxed text-cream/80 max-w-[48ch]">
+              Everything you expect from a coffee shop, elevated. Expect sweet and savoury parathas, milk cake, avocado on toast and chai lattes alongside the classics.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="https://deliveroo.co.uk/menu/royal-tunbridge-wells/tn1/babyccino-49-commercial-road" target="_blank" rel="noopener" class="inline-flex items-center h-11 px-6 rounded-full bg-cream text-olive text-[14px] font-semibold hover:bg-white transition-colors">Order on Deliveroo</a>
+              <a href="https://www.just-eat.co.uk/restaurants-babyccino-tn12/menu" target="_blank" rel="noopener" class="inline-flex items-center h-11 px-6 rounded-full border border-cream/50 text-cream text-[14px] font-semibold hover:bg-cream/10 transition-colors">Order on Just Eat</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7 lg:self-center grid sm:grid-cols-3 gap-4 reveal">
+            <a href="menus/babyccino-menu.pdf" target="_blank" rel="noopener" class="group block bg-olivedeep/60 border border-cream/15 rounded-[4px] p-6 hover:border-cream/40 transition-colors">
+              <p class="font-serif text-[30px] leading-tight">Menu</p>
+              <p class="mt-2 text-[14px] text-cream/65">Full dine in &amp; takeaway menu</p>
+              <span class="mt-8 inline-flex items-center gap-2 text-[13px] font-semibold tracking-wide text-cream/85 group-hover:text-cream">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+            <a href="menus/vegan-menu.pdf" target="_blank" rel="noopener" class="group block bg-olivedeep/60 border border-cream/15 rounded-[4px] p-6 hover:border-cream/40 transition-colors">
+              <p class="font-serif text-[30px] leading-tight">Vegan</p>
+              <p class="mt-2 text-[14px] text-cream/65">Plant-based plates, bowls &amp; pancakes</p>
+              <span class="mt-8 inline-flex items-center gap-2 text-[13px] font-semibold tracking-wide text-cream/85 group-hover:text-cream">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+            <a href="menus/gluten-free-menu.pdf" target="_blank" rel="noopener" class="group block bg-olivedeep/60 border border-cream/15 rounded-[4px] p-6 hover:border-cream/40 transition-colors">
+              <p class="font-serif text-[30px] leading-tight">Gluten free</p>
+              <p class="mt-2 text-[14px] text-cream/65">Breakfast &amp; brunch on gluten free toast</p>
+              <span class="mt-8 inline-flex items-center gap-2 text-[13px] font-semibold tracking-wide text-cream/85 group-hover:text-cream">View PDF <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OUR STORY ============ -->
+    <section id="story" class="bg-white scroll-mt-20">
+      <div class="max-w-site mx-auto px-5 sm:px-8 py-20 lg:py-28">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="order-2 lg:order-1 reveal">
+            <p class="eyebrow text-green mb-4">Our story</p>
+            <h2 class="font-serif text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.02] text-green">A dream that grew with our family.</h2>
+            <p class="mt-6 text-[17px] leading-relaxed text-muted max-w-[56ch]">
+              Babyccino was a dream that flourished as we expanded our family. With just one month between getting the keys for renovations to start and our first baby boy being born, there was plenty to learn all round.
+            </p>
+            <p class="mt-4 text-[17px] leading-relaxed text-muted max-w-[56ch]">
+              With a relative suggesting we were having a baby and a coffee shop, a Babyccino, the name stuck. We opened our doors, and truly our hearts, to the lovely community of Paddock Wood and beyond in January 2024.
+            </p>
+          </div>
+          <div class="order-1 lg:order-2 reveal">
+            <img src="img/storefront.webp" alt="The green Babyccino shopfront on Commercial Road" class="w-full aspect-[16/10] object-cover rounded-[4px]" />
+          </div>
+        </div>
+
+        <div class="mt-20 lg:mt-28 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="reveal">
+            <div class="grid grid-cols-2 gap-4">
+              <img src="img/story-6.webp" alt="Pastry on a ceramic plate with teal linen" class="w-full aspect-[4/5] object-cover rounded-[4px] mt-8" />
+              <img src="img/story-10.webp" alt="Cinnamon swirl pastry with a flat white" class="w-full aspect-[4/5] object-cover rounded-[4px]" />
+            </div>
+          </div>
+          <div class="reveal">
+            <p class="eyebrow text-green mb-4">Picked with care</p>
+            <h3 class="font-serif text-[38px] sm:text-[46px] leading-[1.05] text-ink">Spice expertise, tried and tested recipes</h3>
+            <p class="mt-6 text-[17px] leading-relaxed text-muted max-w-[56ch]">
+              With a background in hospitality from running our own curry house, it felt only right to bring that culinary knowledge to our newest venture. It means we can offer something different, bringing spice expertise along with tried and tested recipes.
+            </p>
+            <p class="mt-4 text-[17px] leading-relaxed text-muted max-w-[56ch]">
+              We developed our menu to give a modern fusion of what you typically expect from a coffee shop, elevated with an Asian twist. You’ll find a real mix of dishes, so your perfect breakfast, brunch or lunch isn’t far away.
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial -->
+        <figure class="mt-20 lg:mt-28 max-w-[60ch] mx-auto text-center reveal">
+          <svg class="mx-auto text-green/40 mb-6" width="36" height="28" viewBox="0 0 36 28" fill="currentColor"><path d="M0 28V16.6C0 7.4 5 1.9 14.5 0l1.8 3.6C10.8 5.4 8.2 9 8 13.2h7V28H0zm21 0V16.6C21 7.4 26 1.9 35.5 0l1.8 3.6C31.8 5.4 29.2 9 29 13.2h7V28H21z"/></svg>
+          <blockquote class="font-serif text-[26px] sm:text-[32px] leading-[1.25] text-ink">
+            “My husband and I visited this week for brunch. The food was divine, coffee delicious and the decor is super bouji. Staff were wonderful too. Highly recommend if you like good quality food and coffee.”
+          </blockquote>
+          <figcaption class="mt-6 text-[14px] tracking-wide text-muted">Claire · Customer</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ VISIT ============ -->
+    <section id="visit" class="bg-creamdeep scroll-mt-20">
+      <div class="max-w-site mx-auto px-5 sm:px-8 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <div class="reveal">
+          <p class="eyebrow text-green mb-4">Find us</p>
+          <h2 class="font-serif text-[44px] sm:text-[56px] leading-[1.02] text-green">On the high street in Paddock Wood</h2>
+          <dl class="mt-10 grid sm:grid-cols-[1fr_1.4fr] gap-x-8 gap-y-8 text-[16px]">
+            <div>
+              <dt class="eyebrow text-muted mb-2">Address</dt>
+              <dd class="leading-relaxed">49 Commercial Road<br />Paddock Wood, Tonbridge<br />Kent TN12 6EN</dd>
+              <dd class="mt-3"><a href="https://www.google.com/maps/search/?api=1&query=Babyccino+49+Commercial+Road+Paddock+Wood+TN12+6EN" target="_blank" rel="noopener" class="text-green font-medium underline underline-offset-4 decoration-green/40 hover:decoration-green">Get directions</a></dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-muted mb-2">Opening hours</dt>
+              <dd class="leading-relaxed">
+                <div class="flex justify-between gap-6 border-b border-line py-1.5 whitespace-nowrap"><span>Monday – Friday</span><span>7:30am – 4:30pm</span></div>
+                <div class="flex justify-between gap-6 border-b border-line py-1.5 whitespace-nowrap"><span>Saturday</span><span>9am – 5pm</span></div>
+                <div class="flex justify-between gap-6 py-1.5 whitespace-nowrap"><span>Sunday</span><span>9am – 4:30pm</span></div>
+              </dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-muted mb-2">Phone</dt>
+              <dd><a href="tel:01580854896" class="hover:text-green">01580 854 896</a></dd>
+            </div>
+            <div>
+              <dt class="eyebrow text-muted mb-2">Email</dt>
+              <dd><a href="mailto:babyccinopaddockwood@gmail.com" class="hover:text-green break-words">babyccinopaddockwood@gmail.com</a></dd>
+            </div>
+          </dl>
+        </div>
+        <div class="reveal">
+          <iframe
+            title="Map showing Babyccino at 49 Commercial Road, Paddock Wood"
+            src="https://www.google.com/maps?q=49+Commercial+Road,+Paddock+Wood,+TN12+6EN&output=embed"
+            class="w-full h-[360px] lg:h-full min-h-[360px] rounded-[4px] border border-line grayscale-[30%]"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="bg-cream scroll-mt-20">
+      <div class="max-w-site mx-auto px-5 sm:px-8 py-20 lg:py-28 grid lg:grid-cols-12 gap-12 lg:gap-16">
+        <div class="lg:col-span-5 reveal">
+          <p class="eyebrow text-green mb-4">Contact</p>
+          <h2 class="font-serif text-[44px] sm:text-[56px] lg:text-[64px] leading-[1.02] text-green">We would love to hear from you.</h2>
+          <ul class="mt-10 space-y-6 text-[16px] leading-relaxed text-muted">
+            <li class="flex gap-4">
+              <span class="mt-2 h-1.5 w-1.5 rounded-full bg-green shrink-0"></span>
+              <span><strong class="text-ink font-semibold">Private hire?</strong> Pop us a message and we’ll provide you with a bespoke quote.</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="mt-2 h-1.5 w-1.5 rounded-full bg-green shrink-0"></span>
+              <span><strong class="text-ink font-semibold">Want to make a booking?</strong> Let us know the date, time and number of guests and we’ll get you in the diary.</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="mt-2 h-1.5 w-1.5 rounded-full bg-green shrink-0"></span>
+              <span><strong class="text-ink font-semibold">Have a new menu idea?</strong> Send over your thoughts and we’ll see what we can do.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TODO (handover): wire the form up. Netlify: add data-netlify="true". Formspree: set action="https://formspree.io/f/XXXX" method="POST". -->
+        <form class="lg:col-span-7 bg-white border border-line rounded-[6px] p-6 sm:p-8 grid sm:grid-cols-2 gap-5 reveal" name="contact" method="POST" action="#" onsubmit="return false;">
+          <label class="block">
+            <span class="block text-[14px] font-medium mb-1.5">First name <span class="text-muted font-normal">(required)</span></span>
+            <input type="text" name="first_name" required class="w-full h-12 px-4 rounded-[4px] border border-line bg-cream/40 focus:bg-white focus:outline-none focus:border-green" />
+          </label>
+          <label class="block">
+            <span class="block text-[14px] font-medium mb-1.5">Last name <span class="text-muted font-normal">(required)</span></span>
+            <input type="text" name="last_name" required class="w-full h-12 px-4 rounded-[4px] border border-line bg-cream/40 focus:bg-white focus:outline-none focus:border-green" />
+          </label>
+          <label class="block">
+            <span class="block text-[14px] font-medium mb-1.5">Email <span class="text-muted font-normal">(required)</span></span>
+            <input type="email" name="email" required class="w-full h-12 px-4 rounded-[4px] border border-line bg-cream/40 focus:bg-white focus:outline-none focus:border-green" />
+          </label>
+          <label class="block">
+            <span class="block text-[14px] font-medium mb-1.5">Phone</span>
+            <input type="tel" name="phone" class="w-full h-12 px-4 rounded-[4px] border border-line bg-cream/40 focus:bg-white focus:outline-none focus:border-green" />
+          </label>
+          <label class="block sm:col-span-2">
+            <span class="block text-[14px] font-medium mb-1.5">What can we help with? <span class="text-muted font-normal">(required)</span></span>
+            <select name="service" required class="w-full h-12 pl-4 pr-10 rounded-[4px] border border-line bg-cream/40 focus:bg-white focus:outline-none focus:border-green text-ink">
+              <option value="" disabled selected>Select an option</option>
+              <option>Table booking</option>
+              <option>Private hire / event</option>
+              <option>Menu idea or feedback</option>
+              <option>Something else</option>
+            </select>
+          </label>
+          <label class="block sm:col-span-2">
+            <span class="block text-[14px] font-medium mb-1.5">Message <span class="text-muted font-normal">(required)</span></span>
+            <textarea name="message" rows="5" required class="w-full px-4 py-3 rounded-[4px] border border-line bg-cream/40 focus:bg-white focus:outline-none focus:border-green"></textarea>
+          </label>
+          <div class="sm:col-span-2 flex flex-wrap items-center gap-4 pt-1">
+            <button type="submit" class="inline-flex items-center h-12 px-8 rounded-full bg-green text-cream text-[15px] font-semibold hover:bg-greendeep transition-colors">Send message</button>
+            <p class="text-[13px] text-muted">Or email <a href="mailto:babyccinopaddockwood@gmail.com" class="text-green underline underline-offset-4 decoration-green/40">babyccinopaddockwood@gmail.com</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-olive text-cream">
+    <div class="max-w-site mx-auto px-5 sm:px-8 pt-16 pb-10">
+      <div class="grid md:grid-cols-12 gap-10 md:gap-8">
+        <div class="md:col-span-5">
+          <p class="font-serif text-[36px] leading-none">Babyccino</p>
+          <p class="mt-1 text-[13px] tracking-[0.18em] uppercase text-cream/60">Coffee &amp; Kitchen</p>
+          <p class="mt-6 text-[15px] leading-relaxed text-cream/75 max-w-[36ch]">49 Commercial Road, Paddock Wood, Kent TN12 6EN</p>
+          <div class="mt-6 flex items-center gap-4">
+            <a href="https://www.instagram.com/babyccino_coffee_and_kitchen/" target="_blank" rel="noopener" aria-label="Instagram" class="text-cream/80 hover:text-cream">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </a>
+            <a href="https://www.facebook.com/p/Babyccino-Paddock-Wood-61552183752474/" target="_blank" rel="noopener" aria-label="Facebook" class="text-cream/80 hover:text-cream">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.4V14h2.8v8h3.3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-3">
+          <p class="eyebrow text-cream/60 mb-4">Explore</p>
+          <ul class="space-y-2.5 text-[15px]">
+            <li><a href="#menu" class="text-cream/85 hover:text-cream">Menu</a></li>
+            <li><a href="#story" class="text-cream/85 hover:text-cream">Our Story</a></li>
+            <li><a href="#visit" class="text-cream/85 hover:text-cream">Find Us</a></li>
+            <li><a href="#contact" class="text-cream/85 hover:text-cream">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4">
+          <p class="eyebrow text-cream/60 mb-4">Newsletter</p>
+          <p class="text-[15px] text-cream/75 leading-relaxed">Sign up to receive Babyccino news and exciting updates.</p>
+          <!-- TODO (handover): connect to Mailchimp / Netlify form -->
+          <form class="mt-4 flex gap-2" onsubmit="return false;">
+            <label class="sr-only" for="nl-email">Email address</label>
+            <input id="nl-email" type="email" placeholder="Email address" class="flex-1 min-w-0 h-11 px-4 rounded-full bg-cream/10 border border-cream/20 text-cream placeholder:text-cream/50 focus:outline-none focus:border-cream/60" />
+            <button type="submit" class="h-11 px-5 rounded-full bg-cream text-olive text-[14px] font-semibold hover:bg-white">Sign up</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="mt-14 pt-6 border-t border-cream/15 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-[13px] text-cream/55">
+        <p>© <span id="year"></span> Babyccino Coffee &amp; Kitchen. All rights reserved.</p>
+        <p>Independent coffee shop in Paddock Wood, Kent.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('mobileNav');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('hidden') === false;
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.add('hidden'); btn.setAttribute('aria-expanded', 'false'); }));
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
