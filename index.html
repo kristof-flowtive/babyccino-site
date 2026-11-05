@@ -405,8 +405,12 @@
           </div>
         </div>
 
-        <!-- TODO (handover): wire the form up. Netlify: add data-netlify="true". Formspree: set action="https://formspree.io/f/XXXX" method="POST". -->
-        <form class="lg:col-span-7 bg-white border border-line rounded-[6px] p-6 sm:p-8 grid sm:grid-cols-2 gap-5 reveal" name="contact" method="POST" action="#" onsubmit="return false;">
+        <!-- Form submissions are emailed to babyccinopaddockwood@gmail.com via FormSubmit (formsubmit.co). The first submission sends a one-time activation email to that inbox which must be confirmed. -->
+        <form id="contactForm" class="lg:col-span-7 bg-white border border-line rounded-[6px] p-6 sm:p-8 grid sm:grid-cols-2 gap-5 reveal" name="contact" method="POST" action="https://formsubmit.co/babyccinopaddockwood@gmail.com">
+          <input type="hidden" name="_subject" value="New enquiry from the Babyccino website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <label class="block">
             <span class="block text-[14px] font-medium mb-1.5">First name <span class="text-muted font-normal">(required)</span></span>
             <input type="text" name="first_name" required class="w-full h-12 px-4 rounded-[4px] border border-line bg-cream/40 focus:bg-white focus:outline-none focus:border-green" />
@@ -438,9 +442,10 @@
             <textarea name="message" rows="5" required class="w-full px-4 py-3 rounded-[4px] border border-line bg-cream/40 focus:bg-white focus:outline-none focus:border-green"></textarea>
           </label>
           <div class="sm:col-span-2 flex flex-wrap items-center gap-4 pt-1">
-            <button type="submit" class="inline-flex items-center h-12 px-8 rounded-full bg-green text-cream text-[15px] font-semibold hover:bg-greendeep transition-colors">Send message</button>
+            <button type="submit" id="contactSubmit" class="inline-flex items-center h-12 px-8 rounded-full bg-green text-cream text-[15px] font-semibold hover:bg-greendeep transition-colors disabled:opacity-60 disabled:cursor-wait">Send message</button>
             <p class="text-[13px] text-muted">Or email <a href="mailto:babyccinopaddockwood@gmail.com" class="text-green underline underline-offset-4 decoration-green/40">babyccinopaddockwood@gmail.com</a></p>
           </div>
+          <p id="contactStatus" class="sm:col-span-2 hidden text-[15px] leading-relaxed" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
@@ -508,6 +513,34 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Contact form: post to FormSubmit without leaving the page, then show a message.
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('contactStatus');
+    const submitBtn = document.getElementById('contactSubmit');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+      status.classList.add('hidden');
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/babyccinopaddockwood@gmail.com', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        if (!res.ok) throw new Error('Request failed');
+        form.reset();
+        status.textContent = 'Thanks, your message is on its way. We’ll get back to you as soon as we can.';
+        status.className = 'sm:col-span-2 text-[15px] leading-relaxed text-green font-medium';
+      } catch (err) {
+        status.textContent = 'Sorry, something went wrong. Please call 01580 854 896 or email babyccinopaddockwood@gmail.com.';
+        status.className = 'sm:col-span-2 text-[15px] leading-relaxed text-red-700';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
+      }
+    });
   </script>
 </body>
 </html>
